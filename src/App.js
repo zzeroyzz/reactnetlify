@@ -13,14 +13,14 @@ export default function App() {
         <h1 className="store-header">Med Cabinet</h1>
         <div className="nav-links">
  
-          <Link to ="/signup">Sign Up</Link>
-          <Link to ="/">Login</Link>
+          <Link to ="/">Sign Up</Link>
+          <Link to ="/login">Login</Link>
         </div>
       </nav>
       
       <Switch>
-          <Route path="/" component={LoginForm}/>
-          <Route path ="/signup" component={SignupForm}/>
+          <Route path="/login" component={LoginForm}/>
+          <Route path ="/" component={SignupForm}/>
       
 
         </Switch>
