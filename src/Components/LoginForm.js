@@ -61,7 +61,7 @@ useEffect(() =>{
       e.preventDefault();
       console.log("login success")
       axios
-      .post("https://med-cab-2020-api.herokuapp.com/login",loginState)
+      .post("https://reqres.in/api/users",loginState)
         .then(res => {
         console.log("success!",res.data);
 
