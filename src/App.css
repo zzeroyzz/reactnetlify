@@ -213,7 +213,7 @@ label {
   display: flex;
   flex-flow: column nowrap;
   align-self:center;
-  margin-bottom:2rem;
+  margin-bottom:1.9rem;
 }
 
 .item-title-wrapper h2{
