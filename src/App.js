@@ -1,27 +1,31 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import "./App.css"
+import LoginForm from "./Components/LoginForm";
+import {  Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import SignupForm from "./Components/SignupForm";
+export default function App() {  
 
-function App() {
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>Deploy React on Netlify on kato</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <h1 className="store-header">Med Cabinet</h1>
+        <div className="nav-links">
+ 
+          <Link to ="/signup">Sign Up</Link>
+          <Link to ="/login">Login</Link>
+        </div>
+      </nav>
+      
+      <Switch>
+          <Route path="/login" component={LoginForm}/>
+          <Route path ="/signup" component={SignupForm}/>
+      
+
+        </Switch>
+
     </div>
+    </Router>
   );
 }
-
-export default App;
